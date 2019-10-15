@@ -1,0 +1,99 @@
+\documentclass[a4paper]{article}
+%\usepackage{simplemargins}
+
+%\usepackage[square]{natbib}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{url}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\Large
+ \begin{center}
+Application for Bike Sharing\\ 
+State of the Art
+
+\hspace{10pt}
+
+% Author names and affiliations
+\large
+Cristian Hasna$^1$ \\
+Marțincu Petru$^1$ \\
+Mircea Rareș - Gabriel$^1$ \\
+
+\hspace{10pt}
+
+\small  
+$^1$ Faculty of Computer Science, ”Alexandru Ioan Cuza” University, Graduate Student\\ 
+
+\end{center}
+
+\hspace{10pt}
+
+\ \\\textbf{Heuristic Bike Optimization Algorithm to Improve Usage Efficiency of the Station-Free Bike Sharing}
+
+
+\normalsize
+
+\ \\
+\textbf{1. Link}
+\ \\ \ \\
+\url{https://www.researchgate.net/publication/333256025_Heuristic_Bike_Optimization_Algorithm_to_Improve_Usage_Efficiency_of_the_Station-Free_Bike_Sharing_System_in_Shenzhen_China}
+\ \\ \ \\
+\textbf{2. Research team}
+\ \\ \ \\
+Zhihui Gu, Yong Zhu, Yan Zhang, Wanyu Zhou, Yu Chen
+\ \\ \ \\
+\textbf{3. Related work}
+\begin{itemize}
+\item A multi-periodic optimization formulation for bike planning and bike utilization \\ \url{https://www.sciencedirect.com/science/article/pii/S0307904X11008201?via%3Dihub} \ \\
+\item A model for the layout of bike stations in public bike‐sharing systems \\\url{https://onlinelibrary.wiley.com/doi/full/10.1002/atr.1311}\ \\ 
+\item Optimizing the location of stations in bike-sharing programs: A GIS approach \\ \url{https://www.sciencedirect.com/science/article/abs/pii/S0143622812000744?via\%3Dihub} \\
+\item A static free-floating bike repositioning problem with multiple heterogeneous vehicles, mutiple depots, and multiple visits \\
+\url{https://www.sciencedirect.com/science/article/pii/S0968090X18301761#b0005}
+\end{itemize}
+
+\ \\ \ \\ 
+\textbf{4. Current state}
+\ \\ \ \\
+In our world, there are several apps that are being used when bike sharing is involved, for example, Mobile (China), Line (USA), I'Velo(Romania), Ape Rider(Romania), and the list could go on. These apps are used by a lot of people every day, thus the apps have a friendly user interface.
+This interface is being coupled with some very important functionalities as the ability to rent the bike from the app, by being able to make payments directly to the bike sharing company. When the transaction is complete, the user has the ability to unlock / lock the bike from the app directly. Also, the most important feature of this kind of apps is the map feature, that shows the user where he can get the closest bike, or where are the bikes stored in general (bike stand, where the user can find the bikes initially). Most of the apps enumerated above, use a mobile app made in Android/iOS with the OS's specific mobile programming language or React Native, coupled with an efficient Web API and maybe some Cloud storage.
+\ \\ \ \\
+
+\textbf{5. Description}
+\ \\ \ \\
+This paper proposes a heuristic bike
+optimization algorithm (HBOA) to determine the optimal supply and distribution of bikes considering
+the effect of bicycle cycling. In this approach, the different bike trips with separate bikes can be
+connected in space and time and converted into a continuous trip chain for a single bike. To improve
+this cycling efficiency, it was insisted to properly design the bicycle distribution. The core concept of the HBOA is to use the fewest number of bikes to meet all
+cycling requirements. The principle of using shared bikes is ”first come, first served”. If the ending
+position of one trip is close to the starting position of another trip, the ending time of the last trip and
+the starting time of the next trip can be continuous in time; thus, in theory, the same bike can be used
+for both trips.
+\ \\ \ \\
+\textbf{6. Methods and techniques used}
+\ \\ \ \\
+To obtain a more reasonable number of optimized bikes, the authors set the minimum time interval for
+cycling requirements between the ending time of the last trip and the starting time of next trip to 10
+minutes, and the maximum Euclidean distance between the ending position of the last trip and the
+starting position of the next trip is 100 meters. That is, after completing the last trip, the optimized
+bike would service the closest trip at that time within 100 m of the ending position. Finally, the
+number of optimized bikes could be considered the ideal delivery scale of shared bikes in meeting all
+cycling requirements. The initial positions of these bikes can also be considered an optimal
+configuration for delivering or dispatching the shared bikes.
+\ \\ \ \\
+\textbf{7. Evaluating the results}
+\ \\ \ \\
+Through the API ports of shared bike apps, the positions of all vacant bikes were given in real
+time. Therefore, the authors scanned the positions of vacant bikes for two companies, Ofo and Mobike, which
+account for more than 80\% of the shared bike market. Limited by the app client, they only obtained 2
+days of scanning data from 6–7 May 2018. The HBAO indicated that only 137,216 bikes were needed to complete all valid trips on 6 May
+2018, and 154,625 bikes were needed on 7 May 2018. The average usage number of an optimized bike
+on each day was 4.6 and 4.2. Overall, less than 1/5 of all shared bikes were used.
+
+
+\end{document}
