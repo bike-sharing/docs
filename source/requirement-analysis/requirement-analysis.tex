@@ -1,0 +1,90 @@
+\documentclass[a4paper]{article}
+%\usepackage{simplemargins}
+
+%\usepackage[square]{natbib}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{url}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\Large
+ \begin{center}
+Application for Bike Sharing\\ 
+Requirement analysis
+
+\hspace{10pt}
+
+% Author names and affiliations
+\large
+Cristian Hasna$^1$ \\
+Marțincu Petru$^1$ \\
+Mircea Rareș - Gabriel$^1$ \\
+
+\hspace{10pt}
+
+\small  
+$^1$ Faculty of Computer Science, ”Alexandru Ioan Cuza” University, Graduate Student\\ 
+
+\end{center}
+
+\hspace{10pt}
+
+\textbf{Risk event} \ \\
+
+\normalsize
+
+\ \\
+\textbf{1. Overview}
+\begin{itemize}
+\item Our application has the scope of managing shared bicycles, providing useful means of optimizing the cost of maintenance and providing an user-friendly UI wich will help users find the closest bicycle
+\end{itemize}
+\ \\ \ \\ 
+\textbf{2. What will this app do}
+\begin{itemize}
+\item The user should be able to register via email / password, phone / password, or via social media (Facebook, Google), and may verify their identity using an ID card.
+\item Users should be able to specify a destination and/or an estimate time of release when they select a bicycle, which are optional
+\item The application should provide a map of bicycles, with their current status and relevant information, wich may include an estimate time of release, and a destination address if specified.
+\item The user should be able to scan a bicycle's code (QR) which will determine the application to unlock the bicycle for the user and mark it as 'already in use'.
+\item The application should suggest bicycles to users in an optimized maner, and may even suggest to wait for another user having a destination in the proximity of the user and minimal arrival time to release their bike, if none are available.
+\item The application should 'suggest' to users places to release their bike in an optimized maner, based on the statistics of users looking for available bicycles, or based on the bicycles center location
+\item Users should be able to view their rent history and statistics.
+\item The administrators should be able to restrict the access of renting bicycles to certain users.
+\item The bicycles administartors should be able to track down all their bicycles and view their current status and location, and should be presented with relevant statistics of bicycles usage.
+\item The application should state a deadline for releasing the bicycle and provide useful notifications with the amount of time left, based on a maximum rental time which may be changed by an administrator.
+\item Users should be able to report any malfunctions regarding the state of the bicycles to an administrator, which will be immediately notified.
+\end{itemize}
+\ \\ \ \\ 
+\textbf{3. Components}
+\begin{itemize}
+\item Mobile Application
+\item Web Application
+\item Authentication Service
+\item Database Module
+\item Web API
+\item Data Collection Module
+\end{itemize}
+\ \\ \ \\ 
+\textbf{4. Actors}
+\begin{itemize}
+\item User
+\item Administrator
+\item Application
+\end{itemize}
+\ \\ \ \\ 
+\textbf{5. Technologies}
+\begin{itemize}
+\item Java Spring - Web API
+\item React Native - Mobile Application
+\item Angular - Web Application
+\item PostgreSQL - Database
+\item Google Firebase - Authentication, Notifications
+\item WebSockets - Real time communication
+\item Google Maps - Maps integration
+\end{itemize}
+\ \\ \ \\ 
+
+\end{document}
