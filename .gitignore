@@ -1,1 +1,8 @@
 .vscode
+
+# LaTex
+
+*.aux
+*.dvi
+*.log
+*.synctex.gz
