@@ -1,0 +1,82 @@
+\documentclass[a4paper]{article}
+%\usepackage{simplemargins}
+
+%\usepackage[square]{natbib}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{url}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\Large
+ \begin{center}
+Application for Bike Sharing\\ 
+Risk assessment
+
+\hspace{10pt}
+
+% Author names and affiliations
+\large
+Cristian Hasna$^1$ \\
+Marțincu Petru$^1$ \\
+Mircea Rareș - Gabriel$^1$ \\
+
+\hspace{10pt}
+
+\small  
+$^1$ Faculty of Computer Science, ”Alexandru Ioan Cuza” University, Graduate Student\\ 
+
+\end{center}
+
+\hspace{10pt}
+
+\textbf{Risk event} \ \\
+
+\normalsize
+
+\ \\
+\textbf{1. Stolen bike}
+\begin{itemize}
+\item Timeframe: Anytime
+\item Probability: Crime rate for the current city.
+\item Impact: Number of available bikes decreases.
+\item Factors: Weak security such as no locker or a weak type of locker.
+\end{itemize}
+\ \\ \ \\ 
+\textbf{2. Too many idle bikes}
+\begin{itemize}
+\item Timeframe: Anytime
+\item Probability: Medium - High
+\item Impact: Too many bikes are left unused, deeming them costly to run.
+\item Factors: No study is being made before launching the app in the specific city, thus having a low demand and a great supply will only rise the number of idle bikes.
+\end{itemize}
+\ \\ \ \\ 
+\textbf{3. Waiting time for a bike is big}
+\begin{itemize}
+\item Timeframe: Anytime 
+\item Probability: Medium - High
+\item Impact: Very few bikes have been bought, waiting time for a bike will rise sharply when the demand is big.
+\item Factors: Few bikes have been bought in a city where the demand is high, thus creating a situation of high demand - low supply.
+\end{itemize}
+\ \\ \ \\ 
+\textbf{4. Users are holding on to the bikes}
+\begin{itemize}
+\item Timeframe: Anytime 
+\item Probability: Low - Medium 
+\item Impact: Number of available bikes decreases. Some users will go and claim that bike, but won't have access to it, given the fact that their access is blocked.
+\item Factors: Some users hide the bikes in the appartment blocks where the GPS signal is weak, and other users are obstructed.
+\end{itemize}
+\ \\ \ \\ 
+\textbf{5. Defect bikes}
+\begin{itemize}
+\item Timeframe: Anytime 
+\item Probability: Low - Medium
+\item Impact: Bike becomes unusuable. Money has to be spent to fix it.
+\item Factors: Gradual degradation to the bikes, because of little to none maintenance. Some users might abuse them and wreck them, rendering the bikes unusuable. Force majeure.
+\end{itemize}
+\ \\ \ \\ 
+
+\end{document}
