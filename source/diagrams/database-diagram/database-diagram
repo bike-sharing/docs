@@ -1,0 +1,28 @@
+Table users as U {
+  userId varchar [pk, increment]
+  bicycle_id varchar [ref: > B.bicycle_id]
+}
+
+Table bicycles as B {
+  bicycle_id varchar [pk]
+  last_revision_time datetime
+  availability boolean
+  state_id varchar [ref: > S.state_id]
+  longitude varchar
+  latitude varchar
+  location_id varchar [ref: > L.location_id]
+}
+
+Table states as S {
+  state_id varchar [pk]
+  state_name varchar
+  state_description text
+}
+
+Table locations as L {
+  location_id varchar [pk]
+  location_name varchar
+  longitude varchar
+  latitude varchar
+  radius int
+}
