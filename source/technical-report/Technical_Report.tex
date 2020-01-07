@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+
+% includes
+\usepackage{geometry}           % page size
+\usepackage{palatino}           % font
+\usepackage[nottoc]{tocbibind}  % table of contents style
+\usepackage[unicode]{hyperref}  % references from the table of contents
+
+% includes options
+\geometry{  a4paper,            % scientific thesis standard
+            left=3cm,
+            right=2cm,
+            top=2cm,
+            bottom=2cm,
+ }
+\setlength{\parindent}{1cm}     % paragraph indentation
+
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage{indentfirst}
+
+\begin{document}
+\renewcommand{\baselinestretch}{1}
+\setlength{\parskip}{0.5em}
+
+\begin{titlepage}
+\begin{center}
+
+% \vspace*{.06\textheight}
+{\scshape\Large {"Alexandru Ioan Cuza" University Iaşi}\par}\vspace{0.5cm} 
+\textbf{\textsc{\Large {FACULTY OF COMPUTER SCIENCE}}}\\[0.5cm] 
+\textbf{\textsc{\Large {SOFTWARE ENGINEERING MASTERS}}}\\[0.5cm] 
+\vspace{1cm}
+\centering
+
+\vspace{0.6cm}
+{\huge \bfseries {Bicycle sharing application}\par}\vspace{0.4cm} 
+\vspace{1.5cm}
+
+\begin{center}
+\textbf{\textit{\LARGE Hasna Cristian}} \\
+\vspace{0.3cm}
+\textbf{\textit{\LARGE Marțincu Petru}} \\
+\vspace{0.25cm}
+\textbf{\textit{\LARGE Mircea Rareș - Gabriel}}
+\end{center}
+
+\vspace{0.7cm}
+\begin{center}
+\textbf{\Large Sesiunea: }{\textit{\LARGE iulie, 2019}}
+\end{center}
+
+\vspace{0.7cm}
+\begin{center}
+\textbf{\Large Scientific Coordinators}\par
+\vspace{0.3cm}
+\textbf{\textit{PhD Associate Professor Adrian Iftene}} \\
+\vspace{0.3cm}
+\textbf{\textit{PhD Lecturer Cristian Frăsinaru }}
+\end{center}
+
+\end{center}
+\end{titlepage}
+\let\cleardoublepage\clearpage\newpage
+
+\section{Problem presentation}
+
+Bike sharing is a feature that is present in the big cities for quite some time, and for almost all duration of it's living it was treated like any other mundane object; it simply is. Time has past, and now, in the Digital Era, where mankind is becoming more and more inter-twined, it tries to become more efficient, so it turned it's eyes to the bike sharing stands. Some researchers wanted to see how efficient is a bike sharing system, and for beginning, they had around 500 000 bikes to start. 
+
+After a few months, they found out that only a fifth of all bikes are being used from a day to day basis, this issue driving them further to formulate the "Heuristic Bike Optimization Algorithm" (HBOA). In  this  approach,  the  different  bike  trips  with  separate  bikes can be connected in space and time and converted into a continuous trip chain for a single bike. To improve this cycling efficiency, it was insisted to properly design the bicycle distribution. 
+
+The core concept of the HBOA is to use the fewest number of bikes to meet all cycling requirements. The principle of using shared bikes is ”first come, first served”. If the ending position of one trip is close to the starting position of another trip,  the ending time of the last trip and the starting time of the next trip can be continuous in time; thus, in theory,the same bike can be used for both trips.
+
+\section{State-of-the-art}
+
+In  our  world,  there  are  several  apps  that  are  being  used  when  bike  sharing is  involved,  for  example,  Mobile  (China),  Line  (USA),  I’Velo(Romania),  ApeRider(Romania),  and  the  list  could  go  on.   These  apps  are  used  by  a  lot  of people every day,  thus the apps have a friendly user interface.  This interfaces being coupled with some very important functionalities as the ability to rent the  bike  from  the  app,  by  being  able  to  make  payments  directly  to  the  bike sharing company.  When the transaction is complete, the user has the ability to unlock / lock the bike from the app directly.  Also, the most important feature of this kind of apps is the map feature, that shows the user where he can get the closest bike, or where are the bikes stored in general (bike stand, where the user  can  find  the  bikes  initially).   Most  of  the  apps  enumerated  above,  use  a mobile app made in Android/iOS with the OS’s specific mobile programming language or React Native, coupled with an efficient Web API and maybe some Cloud storage.
+
+\section{Our proposed solution}
+
+Our proposed solution is to develop a new bike sharing application from scratch using modern development techniques. This application will be divided into two bigger parts; the User Interface, created with React Native, that will allow the user to connect to our app with Google/Facebook/normal account, and a Web API developed with the help of Java Spring, PostgreSQL and Heroku(where our API is being deployed and exposed to the UI).
+
+In the Web API component we have included the algorithm part...
+
+\section{Results and Evaluation}
+
+App is currently working and we have done some non-functional and functional testing and so far the results are pretty good for an application build on a scale this small.
+
+\subsection{Comparison}
+
+We cannot compare our results yet with any other apps, because almost all applications that are in production do not engage in any usage of HBOA, thus we can conclude that if our app is working as expected, the results are great.
+
+\section{Future work}
+
+We can work on the scalability of our appplication, which in part is being limited by Heroku ( we are using a free version ). Another future work would be to work with real time data, not just mocked data that we have on the client/server side.
+
+\section{Conclusion}
+
+\section{Bibliography}
+
+\begin{itemize}
+\item A multi-periodic optimization formulation for bike planning and bike utilization \\ \url{https://www.sciencedirect.com/science/article/pii/S0307904X11008201?via%3Dihub} \ \\
+\item A model for the layout of bike stations in public bike‐sharing systems \\\url{https://onlinelibrary.wiley.com/doi/full/10.1002/atr.1311}\ \\ 
+\item Optimizing the location of stations in bike-sharing programs: A GIS approach \\ \url{https://www.sciencedirect.com/science/article/abs/pii/S0143622812000744?via\%3Dihub} \\
+\item A static free-floating bike repositioning problem with multiple heterogeneous vehicles, mutiple depots, and multiple visits \\
+\url{https://www.sciencedirect.com/science/article/pii/S0968090X18301761#b0005}
+\end{itemize}
+
+\end{document}
